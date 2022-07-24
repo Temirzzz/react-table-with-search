@@ -1,0 +1,12 @@
+.table__body {
+  td {
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &-item_align {
+    text-align: center;
+  }
+}

@@ -1,20 +1,12 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getPosts } from "../../store/actions/getPosts";
+import "./tableBody.scss";
 
 const TableBody = ({ postsFilter }) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getPosts());
-  }, []);
-
   return (
-    <tbody>
+    <tbody className="table__body">
       {postsFilter &&
         postsFilter.map((post) => (
           <tr key={post.id}>
-            <td>{post.id}</td>
+            <td className="table__body-item_align">{post.id}</td>
             <td>{post.title}</td>
             <td>{post.body}</td>
           </tr>

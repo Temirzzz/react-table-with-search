@@ -1,0 +1,21 @@
+.search {
+  position: relative;
+  width: 631px;
+  margin: 23px 0 15px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  input {
+    height: 52px;
+  }
+
+  input,
+  input:focus {
+    background: #5a5c66;
+    color: #fff;
+    outline: none;
+    border-color: unset;
+    box-shadow: none;
+  }
+}

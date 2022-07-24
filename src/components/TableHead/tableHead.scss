@@ -1,0 +1,41 @@
+.table__head {
+  height: 54px;
+  background: #474955;
+  box-shadow: 0px 4px 27px rgba(230, 231, 234, 0.78);
+
+  th {
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @media screen and (max-width: 370px) {
+      font-size: 12px;
+    }
+  }
+
+  &-item_first {
+    min-width: 110px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      min-width: 65px;
+    }
+  }
+
+  &-item_second {
+    min-width: 529px;
+
+    @media screen and (max-width: 1280px) {
+      min-width: 105px;
+    }
+  }
+
+  &-item_third {
+    min-width: 105px;
+  }
+
+  .revert {
+    transition: 0.3s ease-in-out;
+    transform: rotate(180deg);
+  }
+}

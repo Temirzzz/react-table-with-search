@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import "./pagination.scss";
+
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const postsNumber = [];
 
@@ -5,20 +8,17 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     postsNumber.push(i);
   }
 
-  // const number = postsNumber.map((number) => {
-  //   return number;
-  // });
-
-  // console.log(number);
-
   return (
     <ul className="pagination">
       {postsNumber.map((number) => (
-        <li className="page-item" key={number}>
-          <a href="!#" className="page-link" onClick={() => paginate(number)}>
-            {number}
-          </a>
-        </li>
+        <Link
+          key={number}
+          to={number}
+          className="pagination__link"
+          onClick={() => paginate(number)}
+        >
+          {number}
+        </Link>
       ))}
     </ul>
   );

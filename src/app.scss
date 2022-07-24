@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 23px 77px 12px 74px;
+  @media screen and (max-width: 767px) {
+    padding: 10px;
+  }
+
+  .table {
+    margin-bottom: 0;
+  }
+}
